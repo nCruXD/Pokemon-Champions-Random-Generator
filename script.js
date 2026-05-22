@@ -134,3 +134,23 @@ btn.addEventListener("click", async () => {
         }
     }
 });
+
+const regImage = document.getElementById("reg-image");
+
+//  imagen
+const imagenesRegulacion = {
+    "todos": "images/Estandar.jpg",
+    "reg_1": "images/M-A.jpg",
+    "reg_2": "images/Estandar.jpg"
+};
+
+regSelector.addEventListener("change", () => {
+    const seleccion = regSelector.value;
+    
+    // Cambia la imagen según el selector
+    if (imagenesRegulacion[seleccion]) {
+        regImage.src = imagenesRegulacion[seleccion];
+    } else {
+        regImage.src = "images/Estandar.jpg"; // Imagen de respaldo
+    }
+});
