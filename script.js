@@ -22,7 +22,7 @@ const nombresEnEspanol = {
     'arcanine-hisui': 'Arcanine (Hisui)'
 };
 
-// Cargar el JSON al abrir la página
+// Cargar del JSON
 async function init() {
     try {
         const res = await fetch('data.json');
@@ -35,7 +35,6 @@ async function init() {
 }
 init();
 
-// --- FUNCIONES AUXILIARES ---
 async function getEspecie(id) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
@@ -98,7 +97,7 @@ btn.addEventListener("click", async () => {
         }
     }
 
-    // 3. Selección del resto
+    // Selección del resto
     const poolMezclado = [...poolNormal].sort(() => 0.5 - Math.random());
 
     for (const item of poolMezclado) {
@@ -111,7 +110,7 @@ btn.addEventListener("click", async () => {
         }
     }
 
-    // 4. Renderizado
+    // Renderizado
     grid.innerHTML = "";
     for (const id of seleccionados) {
         try {

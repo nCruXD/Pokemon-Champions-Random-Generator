@@ -275,7 +275,7 @@
       "megas_permitidas": [10033]
     },
     "reg_2": {
-      "nombre": "Regulación Especial",
+      "nombre": "Regulación Especial Prueba",
       "permitidos": [3, 4, 26],
       "megas_permitidas": [10034, 10038]
     }
