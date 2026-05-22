@@ -1,0 +1,21 @@
+body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+.container { margin-top: 50px; }
+#poke-img { width: 200px; height: 200px; display: block; margin: 20px auto; }
+button { padding: 10px 20px; font-size: 18px; cursor: pointer; background: #ff3e3e; color: white; border: none; border-radius: 5px; }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+	min-height: 200px;
+}
+
+.poke-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.poke-card img { width: 100%; height: auto; }
