@@ -139,9 +139,9 @@ const regImage = document.getElementById("reg-image");
 
 //  imagen
 const imagenesRegulacion = {
-    "todos": "images/Estandar.jpg",
-    "reg_1": "images/M-A.jpg",
-    "reg_2": "images/Estandar.jpg"
+    "todos": "Images/Estandar.jpg",
+    "reg_1": "Images/M-A.jpg",
+    "reg_2": "Images/Estandar.jpg"
 };
 
 regSelector.addEventListener("change", () => {
@@ -151,6 +151,6 @@ regSelector.addEventListener("change", () => {
     if (imagenesRegulacion[seleccion]) {
         regImage.src = imagenesRegulacion[seleccion];
     } else {
-        regImage.src = "images/Estandar.jpg"; // Imagen de respaldo
+        regImage.src = "Images/Estandar.jpg"; // Imagen de respaldo
     }
 });
