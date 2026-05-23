@@ -19,7 +19,19 @@ const nombresEnEspanol = {
     'tauros-paldea-aqua-breed': 'Tauros (Variedad Agua)',
     'ninetales-alola': 'Ninetales (Alola)',
     'raichu-alola': 'Raichu (Alola)',
-    'arcanine-hisui': 'Arcanine (Hisui)'
+    'arcanine-hisui': 'Arcanine (Hisui)',
+    'morpeko-full-belly': 'Morpeko',
+    'basculegion-male': 'Bascugelion (Macho)',
+    'basculegion-female': 'Bascugelion (Hembra)',
+    'meowstic-male': 'Meowstic (Macho)',
+    'meowstic-female': 'Meowstic (Hembra)',
+    'lycanroc-midday': 'Lycanroc (Diurno)',
+    'lycanroc-midnight': 'Lycanroc (Nocturno)',
+    'lycanroc-dusk': 'Lycanroc (Crepuscular)',
+    'aegislash-shield': 'Aegislash',
+    'mimikyu-disguised': 'Mimikyu',
+    'maushold-family-of-four': 'Maushold',
+    'gourgeist-average': 'Gourgeist',
 };
 
 // Cargar del JSON
