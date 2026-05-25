@@ -6,28 +6,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="language-selector">
+    <button onclick="cambiarIdioma('es')">ES</button>
+    <button onclick="cambiarIdioma('en')">EN</button>
+    </div>
+
     <div class="container">
         <div class="control-box">
-        <h1>Generador de equipos random para Pokémon Champions</h1>
+        <h1 id="titulo">Generador de equipos random para Pokémon Champions</h1>
         
         <div class="controls-wrapper">
             <div class="checkbox-container">
-        <label>
-            <input type="checkbox" id="mega-toggle"> Incluir una Megaevolución
+        <label id="label-mega">
+            <input type="checkbox" id="mega-toggle"><span id="text-mega">Incluir una Megaevolución</span>
         </label>
         <br>
-        <label>
-            <input type="checkbox" id="second-mega-toggle" disabled> Incluir una segunda Megaevolución
+        <label id="label-mega2">
+            <input type="checkbox" id="second-mega-toggle" disabled> <span id="text-mega2">Incluir una segunda Megaevolución</span>
         </label>
             </div>
 
         <div class="selector-container">
-            <label for="reg-selector">Reglamento:</label>
+            <label id="label-reglamento" for="reg-selector">Reglamento:</label>
             <br>
         <select id="reg-selector">
-            <option value="todos">Todos</option>
-            <option value="reg_1">Reglamento M-A</option>
-            <option value="reg_2">Regulación Especial Prueba</option>
+            <option value="todos" id="opt-todos">Todos</option>
+            <option value="reg_1" id="opt-reg-1">Reglamento M-A</option>
+            <option value="reg_2" id="opt-reg-2">Regulación Especial Prueba</option>
         </select>
         </div>
         </div>

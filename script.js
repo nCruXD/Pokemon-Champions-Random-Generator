@@ -166,3 +166,45 @@ regSelector.addEventListener("change", () => {
         regImage.src = "img/Estandar.jpg"; // Imagen de respaldo
     }
 });
+
+// Cadetto best funtion
+const traducciones = {
+    es: {
+        titulo: "Generador de equipos random para Pokémon Champions",
+        boton: "¡Elegir Pokémon!",
+        mega: "Incluir una Megaevolución",
+        mega2: "Incluir una segunda Megaevolución",
+        reglamento: "Reglamento:",
+        opt_todos: "Todos",
+        opt_reg1: "Reglamento M-A",
+        opt_reg2: "Regulación Especial Prueba"
+    },
+    en: {
+        titulo: "Random Team Generator for Pokémon Champions",
+        boton: "Generate Team!",
+        mega: "Include a Mega Evolution",
+        mega2: "Include a second Mega Evolution",
+        reglamento: "Regulation:",
+        opt_todos: "All",
+        opt_reg1: "Regulation M-A",
+        opt_reg2: "Special Regulation Test"
+    }
+};
+
+function cambiarIdioma(lang) {
+    document.getElementById("titulo").innerText = traducciones[lang].titulo;
+    document.getElementById("random-btn").innerText = traducciones[lang].boton;
+    document.getElementById("text-mega").innerText= traducciones[lang].mega;
+    document.getElementById("text-mega2").innerText = traducciones[lang].mega2;
+    document.getElementById("label-reglamento").innerText = traducciones[lang].reglamento;
+    document.getElementById("opt-todos").innerText = traducciones[lang].opt_todos;
+    document.getElementById("opt-reg-1").innerText = traducciones[lang].opt_reg1;
+    document.getElementById("opt-reg-2").innerText = traducciones[lang].opt_reg2;
+    localStorage.setItem('idioma', lang); 
+}
+
+// Detección automática al cargar
+window.onload = () => {
+    const idiomaGuardado = localStorage.getItem('idioma') || navigator.language.split('-')[0];
+    cambiarIdioma(traducciones[idiomaGuardado] ? idiomaGuardado : 'es');
+};
