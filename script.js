@@ -161,7 +161,7 @@ const regImage = document.getElementById("reg-image");
 const imagenesRegulacion = {
     "todos": "img/Estandar.jpg",
     "reg_1": "img/M-A.jpg",
-    "reg_2": "img/Estandar.jpg"
+    "reg_2": "img/M-B.jpg"
 };
 
 regSelector.addEventListener("change", () => {
