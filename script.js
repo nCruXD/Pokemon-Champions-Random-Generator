@@ -5,6 +5,7 @@ const btn = document.getElementById("random-btn");
 const checkMega = document.getElementById("mega-toggle");
 const checkSecondMega = document.getElementById("second-mega-toggle");
 const regSelector = document.getElementById("reg-selector");
+let estaCargando = false;
 
 checkMega.addEventListener("change", () => {
     checkSecondMega.disabled = !checkMega.checked;
@@ -66,10 +67,14 @@ async function getImageUrl(id) {
 
 // --- LÓGICA PRINCIPAL DEL BOTÓN ---
 btn.addEventListener("click", async () => {
+    if (estaCargando) return;
     if (!baseDeDatos.catalogo_maestro) {
         alert("Los datos aún no se han cargado, espera un segundo.");
         return;
     }
+estaCargando = true;
+    btn.disabled = true; // Opcional: desactiva el botón visualmente
+    btn.innerText = "Generando..."; // Opcional: cambia el texto
 
     grid.innerHTML = "<p>Construyendo equipo...</p>";
     
@@ -145,6 +150,9 @@ btn.addEventListener("click", async () => {
             console.error("Error al cargar la tarjeta:", id);
         }
     }
+    estaCargando = false;
+    btn.disabled = false;
+    btn.innerText = "¡Elegir Pokémon!"; // O el texto original de tu botón
 });
 
 const regImage = document.getElementById("reg-image");
@@ -171,13 +179,13 @@ regSelector.addEventListener("change", () => {
 const traducciones = {
     es: {
         titulo: "Generador de equipos random para Pokémon Champions",
-        boton: "¡Elegir Pokémon!",
+        boton: "¡Generar equipo!",
         mega: "Incluir una Megaevolución",
         mega2: "Incluir una segunda Megaevolución",
         reglamento: "Reglamento:",
         opt_todos: "Todos",
         opt_reg1: "Reglamento M-A",
-        opt_reg2: "Regulación Especial Prueba"
+        opt_reg2: "Reglamento M-B"
     },
     en: {
         titulo: "Random Team Generator for Pokémon Champions",
@@ -187,7 +195,7 @@ const traducciones = {
         reglamento: "Regulation:",
         opt_todos: "All",
         opt_reg1: "Regulation M-A",
-        opt_reg2: "Special Regulation Test"
+        opt_reg2: "Regulation M-B"
     }
 };
 
